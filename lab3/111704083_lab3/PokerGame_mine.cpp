@@ -1,0 +1,197 @@
+#include "PokerGame.h"
+
+PokerGame::PokerGame() {}
+void PokerGame::distribute(bool usedCards[52]) {
+    srand(time(NULL));
+    for(int i = 0;i < 5;i++){
+        int tmp = rand() % 52;
+        if(usedCards[tmp] == true) --i;
+        else{
+            usedCards[tmp] = true;
+            playerCards.push_back(tmp);
+        }
+    }
+    //complete(2)
+	//TO_DO: Random generate five cards to player
+	//Hint: Use usedCards to record which card have been distributed
+}
+
+void PokerGame::setCards(vector<int> cards) {
+    for(int i = 0;i < 5;i++) playerCards.push_back(cards[i]); //complete
+	//TO_DO: Set the cards to player
+
+}
+
+void PokerGame::printCards() {
+	cout << "Player cards:" << endl;
+	for(int i = 0;i < 5;i++){
+       int flo = playerCards[i] / 13,num = playerCards[i] % 13;
+       char c;
+       switch(flo){
+          case 0:
+            c = 'C';
+            break;
+          case 1:
+            c = 'D';
+            break;
+          case 2:
+            c = 'H';
+            break;
+          case 3:
+            c = 'S';
+            break;
+       }
+       cout << c << num << " ";
+	}
+	cout << endl;
+}//complete
+
+void PokerGame::sortCards() {
+       for(int i = 4;i > 0;i--){
+          for(int j = 0;j <= i - 1;j++){
+             if((playerCards[j] % 13 > playerCards[j+1] % 13)
+                ||
+                (playerCards[j] % 13 == playerCards[j+1] % 13 && playerCards[j] / 13 > playerCards[j+1] / 13))
+            {
+                int tmp = playerCards[j];
+                playerCards[j] = playerCards[j+1];
+                playerCards[j+1] = tmp;
+            }
+          }
+       }
+}
+
+void PokerGame::evaluate() {
+	sortCards();
+	if (this->isStraight() && this->isFlush()) {
+		type = StraightFlush;
+	}
+	else if (this->isFourOfKind()) {
+		type = FourOfKind;
+	}
+	else if (this->isFullHouse()) {
+		type = FullHouse;
+	}
+	else if (this->isFlush()) {
+		type = Flush;
+	}
+	else if (this->isStraight()) {
+		type = Straight;
+	}
+	else if (this->isThreeOfKind()) {
+		type = ThreeOfKind;
+	}
+	else if (this->isTwoPairs()) {
+		type = TwoPairs;
+	}
+	else if (this->isOnePair()) {
+		type = OnePair;
+	}
+	else {
+		type = HighCard;
+        maxNumber = playerCards[4];
+    }
+		//TO_DO: Set the maxNumber
+
+	}
+
+
+int PokerGame::getType() {
+	return type;
+}
+
+int PokerGame::getMaxNumber() {
+	return maxNumber;
+}
+
+void PokerGame::compare(int type_, int maxNumber_) {
+    if(type > type_
+       ||
+       type == type_ && maxNumber % 13 > maxNumber_ % 13
+       ||
+       type == type_ && maxNumber % 13 == maxNumber_ % 13 && maxNumber / 13 > maxNumber_ / 13)
+        cout << "1" << endl;
+    else cout << "2" << endl;
+	//TO_DO: Compare the type and output who is winner
+	//Compare the type of card first. If types are the same, compare maxNumber of card.
+	//If maxNumber is the same, compare the suit of card.
+
+
+}
+
+bool PokerGame::isStraight() {
+
+    vector<int> num;
+	for(int i = 0;i < 5;i++) num.push_back(playerCards[i] % 13);
+	for(int i = 0;i < 4;i++) if(num[i] + 1 != num[i+1]) return false;
+          maxNumber = playerCards[4];
+          return true;
+}
+
+bool PokerGame::isFlush() {
+     for(int i = 1;i < 5;i++){
+         if(playerCards[i] / 13 != playerCards[i-1] / 13) return false;
+     }
+     maxNumber = playerCards[4];
+     return true;
+	//TO_DO: Check whether the hand of cards is Flush or not and set the maxNumber
+
+}
+
+bool PokerGame::isFourOfKind() {
+    if(playerCards[0] % 13 == playerCards[3] % 13 || playerCards[1] % 13 == playerCards[4] % 13){
+              maxNumber = playerCards[1];
+              return true;
+    }else return false;
+	//TO_DO: Check whether the hand of cards is FourOfaKind or not and set the maxNumber
+
+}
+
+bool PokerGame::isFullHouse() {
+    if(playerCards[0] % 13 == playerCards[2] % 13 && playerCards[3] % 13 == playerCards[4] % 13
+        || playerCards[2] % 13 == playerCards[4] % 13 && playerCards[0] % 13 == playerCards[1] % 13){
+        maxNumber = playerCards[2];
+              return true;
+    }else return false;
+	//TO_DO: Check whether the hand of cards is FullHouse or not and set the maxNumber
+
+}
+
+bool PokerGame::isThreeOfKind() {
+    if(playerCards[0] % 13 == playerCards[2] % 13
+        || playerCards[2] % 13 == playerCards[4] % 13
+        || playerCards[1] % 13 == playerCards[3] % 13){
+        maxNumber = playerCards[2];
+              return true;
+    }else return false;
+	//TO_DO: Check whether the hand of cards is ThreeOfaKind or not and set the maxNumber
+
+}
+
+bool PokerGame::isTwoPairs() {
+     if(playerCards[0] % 13 == playerCards[1] % 13 && playerCards[2] % 13 == playerCards[3] % 13
+         ||
+         playerCards[1] % 13 == playerCards[2] % 13 && playerCards[3] % 13 == playerCards[4] % 13){
+        maxNumber = playerCards[3];
+            return true;
+    }else return false;
+	//TO_DO: Check whether the hand of cards is TwoPairs or not and set the maxNumber
+
+}
+
+bool PokerGame::isOnePair() {
+    if(playerCards[0] % 13 == playerCards[1] % 13
+       || playerCards[1] % 13== playerCards[2] % 13
+       )
+    {
+        maxNumber = playerCards[1];
+              return true;
+    }else if(playerCards[2] % 13 == playerCards[3] % 13
+       || playerCards[3] % 13 == playerCards[4] % 13){
+           maxNumber = playerCards[3];
+              return true;
+       }
+    else return false;
+	//TO_DO: Check whether the hand of cards is OnePair or not and set the maxNumber
+
+}

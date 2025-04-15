@@ -1,0 +1,15 @@
+StraightFlush
+FourOfaKind
+1
+FourOfaKind
+FullHouse
+1
+FullHouse
+Flush
+1
+Flush
+Straight
+1
+Flush
+Flush
+2

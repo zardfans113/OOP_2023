@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1678195255 source:c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\lab3\lab3.cpp
+	<iostream>
+	<fstream>
+	"PokerGame.h"
+	<algorithm>
+
+1678195270 c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\lab3\pokergame.h
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<string>
+
+1678195263 source:c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\lab3\pokergame.cpp
+	"PokerGame.h"
+
+1678257696 source:c:\users\jason\onedrive\桌面\lab3\lab3.cpp
+	<iostream>
+	<fstream>
+	"PokerGame.h"
+	<algorithm>
+
+1678251377 c:\users\jason\onedrive\桌面\lab3\pokergame.h
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<string>
+
+1678248391 source:c:\users\jason\onedrive\桌面\lab3\pokergame.cpp
+	"PokerGame.h"
+
+1678355216 source:c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\lab3_mine.cpp
+	<iostream>
+	<fstream>
+	"PokerGame.h"
+	<algorithm>
+
+1678251377 c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\pokergame.h
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<string>
+
+1678355971 source:c:\users\jason\onedrive\桌面\黃世強oop\lab3\111704083_lab3\pokergame_mine.cpp
+	"PokerGame.h"
+

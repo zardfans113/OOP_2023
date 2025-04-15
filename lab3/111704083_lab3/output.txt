@@ -1,0 +1,15 @@
+FullHouse
+ThreeOfKind
+1
+TwoPairs
+TwoPairs
+2
+FullHouse
+FourOfKind
+2
+Straight
+StraightFlush
+2
+OnePair
+OnePair
+1
