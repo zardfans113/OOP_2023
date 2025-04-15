@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\jason\OneDrive\桌面\黃世強oop\lab6\Lab6_template\lab6\main.cpp(11,54): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\jason\OneDrive\桌面\黃世強oop\lab6\Lab6_template\lab6\main.cpp(16,56): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\jason\OneDrive\桌面\黃世強oop\lab6\Lab6_template\lab6\main.cpp(27,59): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+  lab6.vcxproj -> C:\Users\jason\OneDrive\桌面\黃世強oop\lab6\Lab6_template\lab6\Debug\lab6.exe
