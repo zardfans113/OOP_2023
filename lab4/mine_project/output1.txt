@@ -1,0 +1,5 @@
+the order of two dates: [2000/01/01 2000/10/27]
+the number of days between two dates: 300
+
+the order of two dates: [2009/04/05 2009/04/12]
+the number of days between two dates: 7

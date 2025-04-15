@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1678901353 source:c:\users\jason\onedrive\桌面\lab4_template\lab4_template\lab4.cpp
+	<iostream>
+	"DateComparator.h"
+
+1678952889 c:\users\jason\onedrive\桌面\lab4_template\lab4_template\datecomparator.h
+	<algorithm>
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<vector>
+	<sstream>
+	<cstdlib>
+
+1678952900 source:c:\users\jason\onedrive\桌面\lab4_template\lab4_template\datecomparator.cpp
+	"DateComparator.h"
+
+1678961092 source:c:\users\jason\onedrive\桌面\黃世強oop\lab4\mine_project\lab4_mine\datecomparator_mine.cpp
+	"DateComparator_mine.h"
+
+1678960958 c:\users\jason\onedrive\桌面\黃世強oop\lab4\mine_project\lab4_mine\datecomparator_mine.h
+	<algorithm>
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<vector>
+	<sstream>
+	<cstdlib>
+
+1678959032 source:c:\users\jason\onedrive\桌面\黃世強oop\lab4\mine_project\lab4_mine\lab4_mine.cpp
+	<iostream>
+	"DateComparator_mine.h"
+

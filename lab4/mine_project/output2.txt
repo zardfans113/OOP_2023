@@ -1,0 +1,20 @@
+the order of two dates: [2020/04/03 2020/10/31]
+the number of days between two dates: 211
+
+the order of two dates: [2011/01/06 2011/01/06]
+the number of days between two dates: 0
+
+the order of two dates: [2015/07/25 2016/02/10]
+the number of days between two dates: 200
+
+the order of two dates: [2011/08/31 2011/10/01]
+the number of days between two dates: 31
+
+the order of two dates: [2003/10/04 2004/10/03]
+the number of days between two dates: 365
+
+the order of two dates: [2009/04/05 2009/04/12]
+the number of days between two dates: 7
+
+the order of two dates: [2019/12/31 2020/01/17]
+the number of days between two dates: 17

@@ -1,0 +1,20 @@
+the order of two dates: [2022/02/22 2022/10/02]
+the number of days between two dates: 222
+
+the order of two dates: [2003/03/09 2013/12/20]
+the number of days between two dates: 3939
+
+the order of two dates: [2009/02/09 2009/02/09]
+the number of days between two dates: 0
+
+the order of two dates: [2013/03/11 2015/08/08]
+the number of days between two dates: 880
+
+the order of two dates: [2013/06/25 2013/09/10]
+the number of days between two dates: 77
+
+the order of two dates: [2004/02/29 2005/02/28]
+the number of days between two dates: 365
+
+the order of two dates: [2017/02/14 2017/03/14]
+the number of days between two dates: 28
