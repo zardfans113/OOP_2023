@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1681182180 source:c:\users\jason\onedrive\桌面\黃世強oop\lab5\lab5_template\lab5_template\lab5.cpp
+	<iostream>
+	<fstream>
+	"Matrix.h"
+
+1680330447 c:\users\jason\onedrive\桌面\黃世強oop\lab5\lab5_template\lab5_template\matrix.h
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+
